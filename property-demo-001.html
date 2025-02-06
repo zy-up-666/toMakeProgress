@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    window.onload = function () {
+      // const obj = { name: "Alice", age: 25 };
+
+      // console.log("obj", obj);
+
+      // if ("name" in obj) {
+      //   console.log("name 属性存在");
+      // } else {
+      //   console.log("name 属性不存在");
+      // }
+
+      // if ('toString' in obj) {
+      //   console.log("toString 属性存在");
+      // } else {
+      //   console.log("toString属性不存在");
+      // }
+
+      // const obj = { name: "Alice", age: 25 };
+      // const fruits = { name: "apple", size: 10, color: "red" };
+      // if (Object.keys(obj).includes("name")) {
+      //   console.log("name 属性存在");
+      // }
+
+      // console.log("fruits 属性", Object.keys(fruits));
+
+
+
+      const obj = { name: "Alice", age: 25 };
+      console.log(Reflect.has(obj,'name'));//true
+    };
+  </script>
+</html>
