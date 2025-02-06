@@ -32,10 +32,27 @@
 
       // console.log("fruits 属性", Object.keys(fruits));
 
+      // const obj = { name: "Alice", age: 25 };
+      // console.log(Reflect.has(obj,'name'));//true
 
+      const person={
+  name:'Jack',
+  age:18,
+  color:'yellow'
+}
+//给person对象添加一个可枚举属性gender
+Object.defineProperty(person,'gender',{
+  value:'male',
+  enumerable:true,//设置为可枚举
+});
+console.log('可枚举属性gender',Object.keys(person));//["name", "age", "color", "gender"]
 
-      const obj = { name: "Alice", age: 25 };
-      console.log(Reflect.has(obj,'name'));//true
+//给person对象添加一个不可枚举属性save
+Object.defineProperty(person,'save',{
+  value:'0.1',
+  enumerable:false,//设置为不可枚举
+})
+console.log('不可枚举属性save',Object.keys(person));
     };
   </script>
 </html>
