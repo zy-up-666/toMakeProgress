@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#f4f0ff, #dacdff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-popup {
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+
+  position: relative;
+}
+.chatbot-header {
+  background: #6d4fc2;
+  display: flex;
+  padding: 15px 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatbot-info {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.chatbot-info span {
+  /* font-size: 1.4rem; */
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  padding: 6px;
+  color: #6d4fc2;
+  border-radius: 50%;
+}
+
+.chatbot-info .logo-text {
+  color: #fff;
+  font-size: 1.51rem;
+  font-weight: 600;
+}
+.chatbot-header button {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+  padding-top: 2px;
+  margin-right: -10px;
+  transition: 0.2s ease;
+  background: #6d4fc2;
+}
+.chatbot-header button:hover {
+  background: #593bab;
+}
+.chatbot-body {
+  padding: 25px 12px;
+}
+/* 聊天内容的高度 */
+[data-simplebar] {
+  height: 460px;
+  width: 100%;
+}
+/* 聊天记录滚动条记录 */
+.simplebar-scrollbar::before {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.simplebar-scrollbar:hover::before {
+  background-color: #b7d413;
+}
+.chatbot-body .message {
+  display: flex;
+  gap: 2px;
+  align-items: flex-start; /* 顶部对齐 */
+  margin-bottom: 16px;
+}
+/* 对方头像 */
+.chatbot-body .bot-message span {
+  border-radius: 50%;
+  color: #6d4fc2;
+  font-size: 2rem;
+}
+/* 聊天气泡 */
+.chatbot-body .message .message-text {
+  border-radius: 10px;
+  background: #f6f2ff;
+  padding: 12px 16px;
+  max-width: 75%; /* 气泡的宽度 */
+
+  /* word-break: break-all;任意字符间断行,保证文字一定在容器内 */
+}
+/* 调整对方气泡 */
+.chatbot-body .bot-message .message-text {
+  background: #6d4fc2;
+  color: #fff;
+  border-radius: 15px;
+}
+
+/* 调整自己的气泡 */
+.chatbot-body .user-message {
+  flex-direction: row-reverse;
+}
+.chatbot-body .user-message .message-text {
+  background: #6d4fc2;
+  color: #fff;
+  border-radius: 15px;
+}
+
+/* 输入框 */
+.chatbot-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6d4fc2;
+}
+.chatbot-footer .chat-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  outline: 1px solid #ffd700;
+  border-radius: 32px;
+  width: 100%;
+}
+.chatbot-footer .message-input {
+  border: none;
+  outline: none; /*点击不显示外边框 */
+  border-radius: 32px; /*和父级元素保持一致 */
+  height: 47px;
+  padding: 0 8px;
+  font-size: 0.95rem;
+  width: 90%;
+}
+.chatbot-footer button {
+  width: 35px;
+  height: 35px;
+  background: #6d4fc2;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+}
